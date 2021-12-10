@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primely</title>
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script src="https://unpkg.com/moralis/dist/moralis.js"></script>
+</head>
+<body>
+    <h1>Primely</h1>
+
+    <button id="btnConnect">Connect wallet</button>
+    <button id="btnUserInfo">Profile</button>
+    <br/>
+    <button id="btnOpenCreateItem">Create Form</button>
+    <br/>
+    <button id="btnMyItems">My NFTs</button>
+
+    <div id="userInfo">
+        <h3>User Profile</h3>
+        <input type="text" id="txtUsername" placeholder="Enter username" required>
+        <input type="text" id="txtEmail" placeholder="Enter email">
+        <small>Optional</small>
+
+        <img height="50" width="50" src="" id="imgAvatar" alt="">
+        <br/>
+        <br/>
+        <label for="fileAvatar">Select Avatar</label>
+        <input type="file" id="fileAvatar" accept="image/*">
+
+        <br/>
+        <br/>
+        <br/>
+        <button id="btn-logout">Logout</button>
+        <button id="btnCloseUserInfo">Close</button>
+        <button id="saveUserInfo">Save</button>
+    </div>
+
+    <div id="createItem">
+        <h3>Create Item</h3>
+        <input type="text" id="txtCreateItemName" placeholder="Enter name" required>
+        <textarea id="txtCreateItemDescription" cols="30" rows="5" placeholder="Enter description"></textarea>
+        <input type="number" min="1" step="0.1" id="numCreateItemPrice" placeholder="Enter price" required>
+
+        <label for="selectCreateItemStatus">Status</label>
+        <select id="selectCreateItemStatus">
+            <option value="0">Not for sale</option>
+            <option value="1">Instant buy</option>
+            <option value="2">Accept Offers</option>
+        </select>
+
+        <label for="fileCreateItemFile">Select File</label>
+        <input type="file" id="fileCreateItemFile" accept="image/*">
+
+        <br/>
+        <br/>
+        <br/>
+        <button id="btnCloseCreateItem">Close</button>
+        <button id="btnCreateItem">Create NFT</button>
+    </div>
+
+    <div id="userItems">
+        <h4>My NFTs</h4>
+        <div id="userItemsList"></div>
+        <button id="btnCloseUserItems">Close</button>
+    </div>
+
+    <div id="itemTemplate">
+        <img src="" alt="" width="300">
+        <h5></h5>
+        <p></p>
+    </div>
+
+    <script type="text/javascript" src="./abi.js"></script>
+    <script type="text/javascript" src="./main.js"></script>
+</body>
+</html>

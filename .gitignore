@@ -1,0 +1,4 @@
+/node_modules
+.env
+
+contracts/node_modules
